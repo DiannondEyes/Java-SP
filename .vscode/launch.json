@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ProcessMaster",
+            "request": "launch",
+            "mainClass": "ProcessMaster",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "ExternalProgramLauncher",
+            "request": "launch",
+            "mainClass": "ExternalProgramLauncher",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
