@@ -15,8 +15,10 @@ public class ProcessMaster {
     static int counter = 0;
 
     public static void main(String[] args) {
-        // ExplorerRunner();
+        ExplorerRunner();
         PIDLister();
+        PriorityGetter();
+        FirstStartedProcessName();
     }
 
     public static void ExplorerRunner() {
@@ -57,6 +59,48 @@ public class ProcessMaster {
 
 
     public static void PriorityGetter() {
+        try {
+            Process process = Runtime.getRuntime().exec("powershell -command \"" +
+            "Get-WmiObject -Query 'SELECT Name, Priority FROM Win32_Process' | ForEach-Object { " +
+                    "[PSCustomObject] @{ 'Process Name' = $_.Name; 'Priority' = " +
+                        "switch ($_.Priority) {" +
+                            "0 {'System priority (0)'} " +
+                            "4 {'Idle (4)'} " +
+                            "6 {'Below normal (6)'} " +
+                            "8 {'Normal (8)'} " +
+                            "9 {'Normal (9)'} " +
+                            "10 {'Above normal (10)'} " +
+                            "11 {'Normal (11)'}; " +
+                            "13 {'High (13)'}; " +
+                            "24 {'Real time (24)'} " +
+                            "default {$_.Priority.ToString()}" +
+                        "}" +
+                    "}" +
+                "} | Format-Table -AutoSize\"");
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "UTF-8"))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+            }
+            process.waitFor();
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
+    public static void FirstStartedProcessName() {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("tasklist.exe /fo csv /nh").getInputStream()))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length > 1) {
+                    System.out.println("Самый первый процесс: " + parts[0].replace('"', ' ').trim());
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

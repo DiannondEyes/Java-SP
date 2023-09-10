@@ -9,6 +9,13 @@
             "name": "ProcessMaster",
             "request": "launch",
             "mainClass": "ProcessMaster",
+            "projectName": "Java-SP_846898c1"
+        },
+        {
+            "type": "java",
+            "name": "ProcessMaster",
+            "request": "launch",
+            "mainClass": "ProcessMaster",
             "projectName": "Java-SP_e893ec20"
         },
         {
