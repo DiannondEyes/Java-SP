@@ -40,7 +40,8 @@ public class ProcessMaster {
 
     public static void PIDLister() {
         List<Integer> pidList = new ArrayList<>();
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("tasklist.exe /fo csv /nh").getInputStream()))) {
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(
+            Runtime.getRuntime().exec("tasklist.exe /fo csv /nh").getInputStream()))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -70,14 +71,15 @@ public class ProcessMaster {
                             "8 {'Normal (8)'} " +
                             "9 {'Normal (9)'} " +
                             "10 {'Above normal (10)'} " +
-                            "11 {'Normal (11)'}; " +
+                            "11 {'Normal (11)'}; " + // Да, как ни странно
                             "13 {'High (13)'}; " +
                             "24 {'Real time (24)'} " +
                             "default {$_.Priority.ToString()}" +
                         "}" +
                     "}" +
-                "} | Format-Table -AutoSize\"");
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), "UTF-8"))) {
+                "} | Sort-Object 'Process Name' | Format-Table -AutoSize\"");
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+                process.getInputStream(), "UTF-8"))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     System.out.println(line);
@@ -90,7 +92,8 @@ public class ProcessMaster {
     }
 
     public static void FirstStartedProcessName() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("tasklist.exe /fo csv /nh").getInputStream()))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+            Runtime.getRuntime().exec("tasklist.exe /fo csv /nh").getInputStream()))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
