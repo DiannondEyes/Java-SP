@@ -7,6 +7,7 @@ class AnimalThread extends Thread {
         this.name = name;
         this.priority = priority;
         this.meters = 0;
+        setPriority(priority);
     }
 
     public void run() {
