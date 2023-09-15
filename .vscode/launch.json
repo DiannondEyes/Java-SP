@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RabbitAndTurtle",
+            "request": "launch",
+            "mainClass": "RabbitAndTurtle",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "Run10Threads",
+            "request": "launch",
+            "mainClass": "Run10Threads",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "ProcessMaster",
             "request": "launch",
             "mainClass": "ProcessMaster",
