@@ -1,46 +1,59 @@
 class AnimalThread extends Thread {
     private String name;
     private int priority;
-    private int distance;
+    private int meters;
 
     public AnimalThread(String name, int priority) {
         this.name = name;
         this.priority = priority;
-        this.distance = 0;
-        setPriority(priority);
+        this.meters = 0;
     }
 
-    public int getDistance() {return this.distance;}
-
     public void run() {
-        try {
-            while (distance < 100) {
-                distance += 10;
-                System.out.println(name + " пробежал(а) " + distance + " м.");
+        while (meters < 100) {
+            meters++;
+            System.out.println(name + " преодолел " + meters + " метров");
+            try {
                 Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-            System.out.println(name + " финишировал(а)!");
-        } catch (InterruptedException e) {
-            System.out.println(name + " был(а) прерван(а).");
         }
+        System.out.println(name + " финишировал!");
+    }
+
+    public void setMeters(int meters) {
+        this.meters = meters;
+    }
+
+    public int getMeters() {
+        return meters;
     }
 }
 
 public class RabbitAndTurtle {
     public static void main(String[] args) {
-        AnimalThread rabbit = new AnimalThread("Кролик", Thread.MIN_PRIORITY); // Запускаю с максимальным приоритетом
-        AnimalThread turtle = new AnimalThread("Черепаха", Thread.MIN_PRIORITY); // Запускаю с минимальным приоритетом
+        AnimalThread rabbit = new AnimalThread("Кролик", Thread.MAX_PRIORITY);
+        AnimalThread turtle = new AnimalThread("Черепаха", Thread.MIN_PRIORITY);
 
         rabbit.start();
         turtle.start();
 
         try {
-            rabbit.join();
-            turtle.join();
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Победил " + (turtle.getDistance() > rabbit.getDistance() ? "Черепаха!" : "Кролик!"));
+        // Динамически меняем приоритеты потоков
+        while (rabbit.getMeters() < 90 || turtle.getMeters() < 90) {
+            if (rabbit.getMeters() >= 90 && turtle.getMeters() < 90) {
+                rabbit.setPriority(Thread.MIN_PRIORITY);
+                turtle.setPriority(Thread.MAX_PRIORITY);
+            } else if (rabbit.getMeters() < 90 && turtle.getMeters() >= 90) {
+                rabbit.setPriority(Thread.MAX_PRIORITY);
+                turtle.setPriority(Thread.MIN_PRIORITY);
+            }
+        }
     }
 }
