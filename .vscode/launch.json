@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ChickenEgg",
+            "request": "launch",
+            "mainClass": "ChickenEgg",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "RabbitAndTurtle",
             "request": "launch",
             "mainClass": "RabbitAndTurtle",
