@@ -1,11 +1,9 @@
 class AnimalThread extends Thread {
     private String name;
-    private int priority;
     private int meters;
 
     public AnimalThread(String name, int priority) {
         this.name = name;
-        this.priority = priority;
         this.meters = 0;
         setPriority(priority);
     }
