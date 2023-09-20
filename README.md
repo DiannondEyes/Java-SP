@@ -1,1 +1,1 @@
-### Знакомство с многопоточной обработкой: [тык](https://github.com/ImMALWARE/Java-SP/Multithread)
+### Знакомство с многопоточной обработкой: [тык](https://github.com/ImMALWARE/Java-SP/tree/main/Multithread)
