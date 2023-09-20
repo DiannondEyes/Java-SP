@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VectorMultiplier2",
+            "request": "launch",
+            "mainClass": "Multithread.VectorMultiplier2",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "VectorMultiplier2",
+            "request": "launch",
+            "mainClass": "Mnogopotok.VectorMultiplier2",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "VectorDivider",
+            "request": "launch",
+            "mainClass": "Mnogopotok.VectorDivider",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "ChickenEgg",
             "request": "launch",
             "mainClass": "ChickenEgg",

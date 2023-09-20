@@ -1,1 +1,1 @@
-![IMG_20230904_235000_215](https://github.com/ImMALWARE/Java-SP/assets/53017160/800641ad-61ce-41e5-9238-604b751aeebe)
+### Знакомство с многопоточной обработкой: [тык](https://github.com/ImMALWARE/Java-SP/Multithread)
