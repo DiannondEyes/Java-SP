@@ -13,7 +13,7 @@ public class VectorMultiplier1 {
 
         for (int i = 0; i < N; i++) vector.set(i, vector.get(i) * multiplier);
 
-        System.out.println(vector);
+        // System.out.println(vector);
         System.out.println("Время выполнения программы: " + (System.currentTimeMillis() - startTime) + " миллисекунд");
     }
 }

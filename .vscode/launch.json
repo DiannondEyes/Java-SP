@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ParallelCopying",
+            "request": "launch",
+            "mainClass": "ParallelCopying",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "SequentialCopying",
+            "request": "launch",
+            "mainClass": "SequentialCopying",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "Copying1",
+            "request": "launch",
+            "mainClass": "Copying1",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "Copying1",
+            "request": "launch",
+            "mainClass": "FileCopying.Copying1",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "VectorMultiplier2",
             "request": "launch",
             "mainClass": "Multithread.VectorMultiplier2",
