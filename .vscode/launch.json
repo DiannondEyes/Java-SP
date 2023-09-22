@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileTypeDetector",
+            "request": "launch",
+            "mainClass": "FileTypeDetector",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "ParallelCopying",
             "request": "launch",
             "mainClass": "ParallelCopying",
