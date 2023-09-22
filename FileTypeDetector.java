@@ -48,7 +48,7 @@ public class FileTypeDetector {
     }
 
     public static void main(String[] args) {
-        System.out.println("Тип файла 100KBImage.jpg: " + detectFileType("FileCopying\\100KBImage.jpg"));
-        System.out.println("Тип файла Besomorph - Army.mp3: " + detectFileType("Besomorph - Army.mp3"));
+        System.out.println("Тип файла 100KBImage: " + detectFileType("FileCopying\\100KBImage.jpg"));
+        System.out.println("Тип файла Besomorph - Army: " + detectFileType("Besomorph - Army.notmp3"));
     }
 }
