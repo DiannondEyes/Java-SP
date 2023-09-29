@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AsyncCopying",
+            "request": "launch",
+            "mainClass": "SyncCopying.AsyncCopying",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
+            "name": "SyncCopying",
+            "request": "launch",
+            "mainClass": "SyncCopying.SyncCopying",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "FileTypeDetector",
             "request": "launch",
             "mainClass": "FileTypeDetector",
