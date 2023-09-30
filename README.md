@@ -1,3 +1,4 @@
+### Шоколадки: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/Chocolate.java)
 ### Синхронное и асинхронное копирование: [тык](https://github.com/ImMALWARE/Java-SP/tree/main/SyncCopying)
 ### Детектор типа файлов: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/FileTypeDetector.java)
 ### Копирование файлов: [тык](https://github.com/ImMALWARE/Java-SP/tree/main/FileCopying)

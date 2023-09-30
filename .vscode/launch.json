@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Chocolate",
+            "request": "launch",
+            "mainClass": "Chocolate",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "AsyncCopying",
             "request": "launch",
             "mainClass": "SyncCopying.AsyncCopying",
