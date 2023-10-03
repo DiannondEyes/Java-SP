@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BankBalance",
+            "request": "launch",
+            "mainClass": "BankBalance",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "Chocolate",
             "request": "launch",
             "mainClass": "Chocolate",
