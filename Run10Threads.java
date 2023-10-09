@@ -1,4 +1,5 @@
 public class Run10Threads implements Runnable {
+    @SuppressWarnings("deprecation")
     public void run() {
         System.out.println("Поток " + Thread.currentThread().getId() + " запущен.");
     }
