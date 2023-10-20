@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "YoutubeDownloader",
+            "request": "launch",
+            "mainClass": "YoutubeDownloader",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "Chocolate",
             "request": "launch",
             "mainClass": "UnitTestingChocolate.Chocolate",
