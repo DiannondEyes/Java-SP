@@ -5,7 +5,6 @@ public class Laba1_2 {
         int min21 = 10001;
         int min3 = 10001;
         int min7 = 10001;
-        
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = (int) (Math.random() * 10001);
             if (numbers[i] < supermin) {
