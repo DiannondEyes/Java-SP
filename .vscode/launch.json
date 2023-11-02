@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Minimizer",
+            "request": "launch",
+            "mainClass": "Minimizer",
+            "projectName": "Java-SP_e893ec20"
+        },
+        {
+            "type": "java",
             "name": "YoutubeDownloader",
             "request": "launch",
             "mainClass": "YoutubeDownloader",
