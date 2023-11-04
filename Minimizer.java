@@ -11,7 +11,7 @@ public class Minimizer {
             StringBuilder optimized = new StringBuilder();  
             String line;
             while ((line = r.readLine()) != null) {
-                if (!line.contains("//")) optimized.append(line);
+                optimized.append(line.replaceAll("//.*", ""));
             };
             r.close();
             BufferedWriter w = new BufferedWriter(new FileWriter("MinimizerResult\\YoutubeDownloader.java"));
