@@ -1,3 +1,6 @@
+### Чат: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/Messenger.java)
+**Демонстрация**:\
+<video src="https://github.com/ImMALWARE/Java-SP/assets/53017160/6d2de647-7d4a-4406-af98-b8949bbc94d7"></video>
 ### Оптимизация размера файла .java: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/Minimizer.java)
 ### Скачивание музыки с YouTube: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/YoutubeDownloader.java)
 Для работы нужно поместить **yt-dlp.exe** и **ffplay.exe** в папку C:\Windows\
