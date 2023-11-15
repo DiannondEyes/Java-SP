@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-@SuppressWarnings("deprecation")
 public class ProcessMaster {
     // 1) Запускать процесс блокнота 10 раз с интервалом который задается системным таймером
     // 2) Получить отсортированный список PID'ов 

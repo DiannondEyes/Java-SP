@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Whatthefuck",
+            "request": "launch",
+            "mainClass": "Whatthefuck",
+            "projectName": "Java-SP_846898c1"
+        },
+        {
+            "type": "java",
+            "name": "Messenger",
+            "request": "launch",
+            "mainClass": "Messenger",
+            "projectName": "Java-SP_846898c1"
+        },
+        {
+            "type": "java",
             "name": "Minimizer",
             "request": "launch",
             "mainClass": "Minimizer",
