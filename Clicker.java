@@ -119,8 +119,7 @@ public class Clicker {
                 } else if (action[0].equals("2")) { // Отправить таблицу лидеров
                     StringBuilder scoreboardString = new StringBuilder("Scoreboard:\n");
 
-                    scoreboard.forEach((ip, clicks) -> scoreboardString.append(ip).append(": ").append(clicks).append("\n"));
-                    System.out.println(scoreboardString.toString());
+                    scoreboard.forEach((ip, clicks) -> scoreboardString.append(ip).append(": ").append(clicks));
                     out.println(scoreboardString.toString());
                 }
             }
