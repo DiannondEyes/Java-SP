@@ -1,3 +1,6 @@
+### Кликер: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/Clicker.java)
+**Демонстрация**:\
+щас будет)
 ### Чат: [тык](https://github.com/ImMALWARE/Java-SP/blob/main/Messenger.java)
 **Демонстрация**:\
 <video src="https://github.com/ImMALWARE/Java-SP/assets/53017160/6d2de647-7d4a-4406-af98-b8949bbc94d7"></video>
